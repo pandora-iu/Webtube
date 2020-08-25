@@ -1,9 +1,9 @@
 from django.urls import path
-from .views import CouseListView, CouseDetailView
+from .views import CourseListView, CourseDetailView
 
 app_name = 'courses'
 
 urlpatterns = [
-    path('', CouseListView.as_view(), name='list_view'),
-    path('<>', CouseDetailView.as_view(), name='detail_view'),
+    path('', CourseListView.as_view(), name='list'),
+    path('<slug>', CourseDetailView.as_view(), name='detail')
 ]

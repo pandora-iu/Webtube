@@ -1,11 +1,8 @@
-from django.shortcuts import render
 from django.views.generic import ListView, DetailView
 from .models import Course
 
-class CouseListView(ListView):
+class CourseListView(ListView):
     model = Course
 
-class CouseDetailView(DetailView):
+class CourseDetailView(DetailView):
     model = Course
-    
-    
