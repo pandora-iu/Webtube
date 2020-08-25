@@ -115,12 +115,10 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static_root'),
@@ -133,3 +131,10 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(VENV_PATH, 'media_root')
+
+if DEBUG:
+    STRIPE_PUBLISHABLE_KEY = 'pk_test_51HB7AXFDuGduF6mcka6COut1sMGVsQ342J1hE5n7BHpYQJUjOKp6Q8pLBMhNlN4MCoBPIlHsphIeTpoTXtGWCaEP008mYy2ZIb'
+    STRIPE_SECRET_KEY = 'sk_test_51HB7AXFDuGduF6mceUaO7ZhpptXxWAe6H8SKVU6gmotsQISTcLL4VGd3YiB9H84QCpyogjQeycAmjgrdpIxkTCOJ00IMlYycaH'
+else:
+    STRIPE_PUBLISHABLE_KEY = 'pk_test_51HB7AXFDuGduF6mcka6COut1sMGVsQ342J1hE5n7BHpYQJUjOKp6Q8pLBMhNlN4MCoBPIlHsphIeTpoTXtGWCaEP008mYy2ZIb'
+    STRIPE_SECRET_KEY = 'sk_test_51HB7AXFDuGduF6mceUaO7ZhpptXxWAe6H8SKVU6gmotsQISTcLL4VGd3YiB9H84QCpyogjQeycAmjgrdpIxkTCOJ00IMlYycaH'
