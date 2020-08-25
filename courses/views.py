@@ -1,3 +1,11 @@
 from django.shortcuts import render
+from django.views.generic import ListView, DetailView
+from .models import Course
 
-# Create your views here.
+class CouseListView(ListView):
+    model = Course
+
+class CouseDetailView(DetailView):
+    model = Course
+    
+    
